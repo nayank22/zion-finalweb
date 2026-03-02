@@ -4,1103 +4,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZION 2026 - Palimpsest | Rewrite the Future</title>
+    <title>ZION 2026</title>
+    <link rel="icon" type="image/png" href="/zion_favicon.png" sizes="32x32">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 
 <body>
-    <!-- Navigation -->
-    <nav id="navigation" class="nav-transparent">
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">
-                <span class="gradient-text-animated">ZION</span>
+            <a href="#" class="logo">
+                <img src="./zion_logo.png" alt="ZION Logo" class="logo.img">
             </a>
-            <ul class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#events" class="nav-link">Events</a></li>
-                <li><a href="#schedule" class="nav-link">Schedule</a></li>
-                <li><a href="#gallery" class="nav-link">Gallery</a></li>
-                <li><a href="#team" class="nav-link">Team</a></li>
-                <li><a href="#sponsors" class="nav-link">Sponsors</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="register-btn">Register Now</button>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-        </div>
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <ul class="mobile-nav-links">
-                <li><a href="#home" class="mobile-nav-link">Home</a></li>
-                <li><a href="#about" class="mobile-nav-link">About</a></li>
-                <li><a href="#events" class="mobile-nav-link">Events</a></li>
-                <li><a href="#schedule" class="mobile-nav-link">Schedule</a></li>
-                <li><a href="#gallery" class="mobile-nav-link">Gallery</a></li>
-                <li><a href="#team" class="mobile-nav-link">Team</a></li>
-                <li><a href="#sponsors" class="mobile-nav-link">Sponsors</a></li>
-                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
-            </ul>
-            <button class="mobile-register-btn">Register Now</button>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#events" class="nav-link">Events</a>
+                <a href="#schedule" class="nav-link">Schedule</a>
+                <a href="#gallery" class="nav-link">Gallery</a>
+                <a href="#team" class="nav-link">Team</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#register" target="_blank" rel="noopener noreferrer" class="btn-register">
+                    Register Now
+                </a>
+
+                <button class="mobile-menu-btn">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="video-background">
-            <video autoplay muted loop playsInline id="heroVideo">
-                <source src="legacy.mp4" type="video/mp4">
+        <div class="hero-bg">
+            <video autoplay loop muted playsinline class="bg-video">
+                <source src="https://finalweb-ruddy-five.vercel.app/legacy.mp4" type="video/mp4">
             </video>
-            <div class="video-overlay"></div>
-            <div class="side-gradient"></div>
         </div>
-        <button class="video-mute-btn hero-mute-btn" id="videoMuteBtn" aria-label="Toggle sound">
-            <svg class="mute-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <line x1="23" y1="9" x2="17" y2="15"></line>
-                <line x1="17" y1="9" x2="23" y2="15"></line>
-            </svg>
-            <svg class="unmute-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                stroke-width="2" style="display: none;">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-            </svg>
-        </button>
+        <div id="particles-js"></div>
         <div class="hero-content">
             <h1 class="hero-title">
-                <span class="gradient-text-animated">ZION</span>
-                <span class="text-white font-light">2026</span>
+                <span class="gradient-text">ZION </span>2026
             </h1>
-            <div class="hero-subtitle">
-                <span class="theme-text">Palimpsest</span>
-                <span class="theme-tagline">— Rewrite the Future —</span>
-            </div>
-            <div class="hero-buttons">
-                <button class="btn-primary btn-magnetic animate-pulse-glow">Register Now</button>
-                <button class="btn-outline" onclick="scrollToSection('#schedule')">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="16" y1="2" x2="16" y2="6"></line>
-                        <line x1="8" y1="2" x2="8" y2="6"></line>
-                        <line x1="3" y1="10" x2="21" y2="10"></line>
-                    </svg>
-                    View Schedule
-                </button>
-            </div>
-            <div class="countdown-container">
-                <p class="countdown-label">Event Starts In</p>
-                <div class="countdown">
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="days">00</div>
-                        <div class="countdown-unit">Days</div>
-                    </div>
-                    <div class="countdown-separator">:</div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="hours">00</div>
-                        <div class="countdown-unit">Hours</div>
-                    </div>
-                    <div class="countdown-separator">:</div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="minutes">00</div>
-                        <div class="countdown-unit">Mins</div>
-                    </div>
-                    <div class="countdown-separator">:</div>
-                    <div class="countdown-item">
-                        <div class="countdown-value" id="seconds">00</div>
-                        <div class="countdown-unit">Secs</div>
-                    </div>
+            <h2 class="hero-subtitle">PALIMPSEST</h2>
+            <p class="hero-tagline">— Rewrite the Future —</p>
+
+            <div class="countdown" id="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-value" id="days">00</span>
+                    <span class="countdown-label">Days</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="hours">00</span>
+                    <span class="countdown-label">Hours</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="minutes">00</span>
+                    <span class="countdown-label">Minutes</span>
+                </div>
+                <div class="countdown-separator">:</div>
+                <div class="countdown-item">
+                    <span class="countdown-value" id="seconds">00</span>
+                    <span class="countdown-label">Seconds</span>
                 </div>
             </div>
+
+            <a href="#about" class="scroll-indicator">
+                <i data-lucide="chevron-down"></i>
+            </a>
         </div>
-        <div class="scroll-indicator" onclick="scrollToSection('#about')">
-            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-        </div>
-        <div class="decorative-blob blob-1"></div>
-        <div class="decorative-blob blob-2"></div>
+        <!-- Glow effects -->
+        <div class="glow-effect glow-top-left"></div>
+        <div class="glow-effect glow-bottom-right"></div>
     </section>
 
     <!-- About Section -->
-    <section id="about" class="about">
+    <section id="about" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">About</span>
-                <h2 class="section-title">ZION</h2>
+            <div class="section-header reveal">
+                <h2 class="section-title"><span class="gradient-text">About</span> ZION</h2>
+                <p class="section-subtitle">PALIMPSEST</p>
             </div>
-            <p class="about-description">
-                Where Innovation Meets Celebration. ZION is not just a fest; it's a movement. From cutting-edge
-                technical competitions to breathtaking cultural performances, we bring together the brightest minds and
-                most talented artists.
-            </p>
-            <div class="theme-section">
-                <span class="theme-label">This Year's Theme</span>
-                <h3 class="theme-name">PALIMPSEST</h3>
-                <p class="theme-description">
-                    Celebrates the layers of stories, experiences, and memories that make ZION what it is — a canvas
-                    that keeps evolving with each passing year.
-                </p>
-            </div>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                            <line x1="8" y1="21" x2="16" y2="21"></line>
-                            <line x1="12" y1="17" x2="12" y2="21"></line>
-                        </svg>
-                    </div>
-                    <div class="stat-value">15</div>
-                    <div class="stat-label">Events</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-                        </svg>
-                    </div>
-                    <div class="stat-value">1833+</div>
-                    <div class="stat-label">Participants</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="8" r="7"></circle>
-                            <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
-                        </svg>
-                    </div>
-                    <div class="stat-value">2L</div>
-                    <div class="stat-label">Prize Pool</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <polyline points="12 6 12 12 16 14"></polyline>
-                        </svg>
-                    </div>
-                    <div class="stat-value">3</div>
-                    <div class="stat-label">Days of Fun</div>
-                </div>
-            </div>
-            <div class="event-categories">
-                <div class="category-card">
-                    <div class="category-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
-                            <rect x="9" y="9" width="6" height="6"></rect>
-                            <line x1="9" y1="1" x2="9" y2="4"></line>
-                            <line x1="15" y1="1" x2="15" y2="4"></line>
-                            <line x1="9" y1="20" x2="9" y2="23"></line>
-                            <line x1="15" y1="20" x2="15" y2="23"></line>
-                            <line x1="20" y1="9" x2="23" y2="9"></line>
-                            <line x1="20" y1="14" x2="23" y2="14"></line>
-                            <line x1="1" y1="9" x2="4" y2="9"></line>
-                            <line x1="1" y1="14" x2="4" y2="14"></line>
-                        </svg>
-                    </div>
-                    <h4>Technical Events</h4>
-                    <p>Hackathons, coding competitions, robotics, and more.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <path d="M9 18V5l12-2v13"></path>
-                            <circle cx="6" cy="18" r="3"></circle>
-                            <circle cx="18" cy="16" r="3"></circle>
-                        </svg>
-                    </div>
-                    <h4>Cultural Events</h4>
-                    <p>Dance, music, drama, and fashion shows.</p>
-                </div>
-                <div class="category-card">
-                    <div class="category-icon">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path
-                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
-                            </path>
-                        </svg>
-                    </div>
-                    <h4>Sports Events</h4>
-                    <p>Cricket, football, basketball, and esports tournaments.</p>
+            <div class="about-content reveal">
+                <div class="about-card glass-card">
+                    <p>Welcome to ZION 2026, the ultimate confluence of technology and culture. This year's theme,
+                        "PALIMPSEST - Rewrite the Future", challenges us to build upon the foundations of the past to
+                        create an innovative and dynamic tomorrow.</p>
+                    <p>Join thousands of students, innovators, and creators in a 3-day extravaganza featuring technical
+                        hackathons, cultural performances, interactive workshops, and gaming tournaments.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Events Section -->
-    <section id="events" class="events">
+    <section id="events" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Exciting Competitions</span>
+            <div class="section-header reveal">
                 <h2 class="section-title">Featured <span class="gradient-text">Events</span></h2>
-                <p class="section-subtitle">Something for everyone. From coding challenges to dance battles, find your
-                    passion and showcase your talent.</p>
             </div>
-            <div class="events-grid">
-                <!-- Event Card 1: Hackathon -->
-                <div class="event-card" data-category="technical">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #a855f7 0%, #3b82f6 100%);"></div>
-                                <div class="event-category-badge technical">Technical</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <polyline points="16 18 22 12 16 6"></polyline>
-                                        <polyline points="8 6 2 12 8 18"></polyline>
-                                    </svg>
-                                    <h3 class="event-title">Hackathon</h3>
-                                    <p class="event-short-desc">24-hour coding marathon</p>
-                                    <span class="hover-hint">Hover to explore</span>
+
+            <div class="tabs-container reveal">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="technical">Technical</button>
+                    <button class="tab-btn" data-tab="cultural">Cultural</button>
+                    <button class="tab-btn" data-tab="sports">Sports</button>
+                </div>
+
+                <div class="tab-content active" id="technical">
+                    <div class="event-grid">
+
+                        <div class="event-card glass-card">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+                                alt="Hackathon" class="event-img">
+                            <div class="event-info">
+                                <span class="badge badge-tech">Technical</span>
+                                <h3>Coding relay</h3>
+                                <p>Coding relay is a multi-round competitive coding event designed to evaluate
+                                    participant's skills under time pressure.</p>
+                                <div class="event-actions">
+                                    <a href="#register" class="btn btn-primary">Register</a>
+                                    <a href="#details" class="btn btn-outline">Details</a>
                                 </div>
                             </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">Hackathon</h3>
-                                    <p class="event-description">Build innovative solutions to real-world problems.
-                                        Teams of 3-4 members.</p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 15</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">10:00 AM</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Tech Block</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">₹50,000</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
+                        </div>
+
+                        <div class="event-card glass-card">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+                                alt="Hackathon" class="event-img">
+                            <div class="event-info">
+                                <span class="badge badge-tech">Technical</span>
+                                <h3>Hash-It-Out</h3>
+                                <p>Hash-It-Out is a 7-hour vibe-coding hackathon where ideas turn into impact.
+                                    Let's Hash-It-Out and build something unforgettable.
+                                </p>
+                                <div class="event-actions">
+                                    <a href="#register" class="btn btn-primary">Register</a>
+                                    <a href="#details" class="btn btn-outline">Details</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card glass-card">
+                            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80"
+                                alt="Robo Wars" class="event-img">
+                            <div class="event-info">
+                                <span class="badge badge-tech">Technical</span>
+                                <h3>Robotics Clash</h3>
+                                <p>Design, build and battle in the ultimate arena.</p>
+                                <div class="event-actions">
+                                    <a href="#register" class="btn btn-primary">Register</a>
+                                    <a href="#details" class="btn btn-outline">Details</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event Card 2: Battle of Bands -->
-                <div class="event-card" data-category="cultural">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #ec4899 0%, #a855f7 100%);"></div>
-                                <div class="event-category-badge cultural">Cultural</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M9 18V5l12-2v13"></path>
-                                        <circle cx="6" cy="18" r="3"></circle>
-                                        <circle cx="18" cy="16" r="3"></circle>
-                                    </svg>
-                                    <h3 class="event-title">Battle of Bands</h3>
-                                    <p class="event-short-desc">Rock the stage</p>
-                                    <span class="hover-hint">Hover to explore</span>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">Battle of Bands</h3>
-                                    <p class="event-description">Showcase your musical talent. Original compositions
-                                        preferred.</p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 16</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">6:00 PM</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Main Ground</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">₹30,000</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
+                <div class="tab-content" id="sports">
+                    <div class="event-grid">
+                        <div class="event-card glass-card">
+                            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=800&q=80"
+                                alt="Hackathon" class="event-img">
+                            <div class="event-info">
+                                <span class="badge badge-tech">Sports</span>
+                                <h3>Arm Wrestling</h3>
+                                <p>Arm Wrestling.</p>
+                                <div class="event-actions">
+                                    <a href="#register" class="btn btn-primary">Register</a>
+                                    <a href="#details" class="btn btn-outline">Details</a>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Event Card 3: E-Sports -->
-                <div class="event-card" data-category="gaming">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);"></div>
-                                <div class="event-category-badge gaming">Gaming</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <line x1="6" y1="12" x2="10" y2="12"></line>
-                                        <line x1="8" y1="10" x2="8" y2="14"></line>
-                                        <line x1="15" y1="13" x2="15.01" y2="13"></line>
-                                        <line x1="18" y1="11" x2="18.01" y2="11"></line>
-                                        <rect x="2" y="6" width="20" height="12" rx="2"></rect>
-                                    </svg>
-                                    <h3 class="event-title">E-Sports</h3>
-                                    <p class="event-short-desc">BGMI & Valorant</p>
-                                    <span class="hover-hint">Hover to explore</span>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">E-Sports</h3>
-                                    <p class="event-description">Compete in popular esports titles. Solo and team
-                                        categories.</p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 15-17</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">All Day</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Gaming Arena</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">₹25,000</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
+                <div class="tab-content" id="cultural">
+                    <div class="event-grid">
+                        <div class="event-card glass-card">
+                            <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?w=800&q=80"
+                                alt="Battle of Bands" class="event-img">
+                            <div class="event-info">
+                                <span class="badge badge-culture">Cultural</span>
+                                <h3>Battle of Bands</h3>
+                                <p>The most awaited musical showdown of the year.</p>
+                                <div class="event-actions">
+                                    <a href="#register" class="btn btn-primary">Register</a>
+                                    <a href="#details" class="btn btn-outline">Details</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Event Card 4: Tech Talks -->
-                <div class="event-card" data-category="technical">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);"></div>
-                                <div class="event-category-badge technical">Technical</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                                        <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                                        <line x1="12" y1="19" x2="12" y2="23"></line>
-                                        <line x1="8" y1="23" x2="16" y2="23"></line>
-                                    </svg>
-                                    <h3 class="event-title">Tech Talks</h3>
-                                    <p class="event-short-desc">Learn from experts</p>
-                                    <span class="hover-hint">Hover to explore</span>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #06b6d4 0%, #8b5cf6 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">Tech Talks</h3>
-                                    <p class="event-description">Industry leaders share insights on AI, ML, and emerging
-                                        technologies.</p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 16</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">2:00 PM</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Auditorium</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">Certificate</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 5: Fashion Show -->
-                <div class="event-card" data-category="cultural">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #f472b6 0%, #a855f7 100%);"></div>
-                                <div class="event-category-badge cultural">Cultural</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <path d="M12 2l9 4.9V17L12 22l-9-4.9V7z"></path>
-                                    </svg>
-                                    <h3 class="event-title">Fashion Show</h3>
-                                    <p class="event-short-desc">Walk the ramp</p>
-                                    <span class="hover-hint">Hover to explore</span>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #a855f7 0%, #f472b6 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">Fashion Show</h3>
-                                    <p class="event-description">Theme-based fashion showcase. Individual and group
-                                        entries.</p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 17</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">7:00 PM</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Main Stage</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">₹20,000</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Event Card 6: Robo Wars -->
-                <div class="event-card" data-category="technical">
-                    <div class="flip-card">
-                        <div class="flip-card-inner">
-                            <div class="flip-card-front">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);"></div>
-                                <div class="event-category-badge technical">Technical</div>
-                                <div class="event-card-content">
-                                    <svg class="event-icon" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-width="2">
-                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                        <line x1="8" y1="21" x2="16" y2="21"></line>
-                                        <line x1="12" y1="17" x2="12" y2="21"></line>
-                                    </svg>
-                                    <h3 class="event-title">Robo Wars</h3>
-                                    <p class="event-short-desc">Battle of bots</p>
-                                    <span class="hover-hint">Hover to explore</span>
-                                </div>
-                            </div>
-                            <div class="flip-card-back">
-                                <div class="event-card-bg"
-                                    style="background: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);"></div>
-                                <div class="event-card-content">
-                                    <h3 class="event-title">Robo Wars</h3>
-                                    <p class="event-description">Build and battle your robots. Weight categories apply.
-                                    </p>
-                                    <div class="event-details">
-                                        <div class="detail-item">
-                                            <span class="detail-label">Date</span>
-                                            <span class="detail-value">March 16</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Time</span>
-                                            <span class="detail-value">11:00 AM</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Venue</span>
-                                            <span class="detail-value">Robotics Lab</span>
-                                        </div>
-                                        <div class="detail-item">
-                                            <span class="detail-label">Prize Pool</span>
-                                            <span class="detail-value">₹35,000</span>
-                                        </div>
-                                    </div>
-                                    <button class="event-register-btn">Register</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="view-all-events">
-                <button class="btn-outline">View All Events</button>
-            </div>
-        </div>
     </section>
 
     <!-- Schedule Section -->
-    <section id="schedule" class="schedule">
+    <section id="schedule" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Plan Your Experience</span>
+            <div class="section-header reveal">
                 <h2 class="section-title">Event <span class="gradient-text">Schedule</span></h2>
-                <p class="section-subtitle">Three days of non-stop excitement. Plan your ZION experience.</p>
             </div>
-            <div class="schedule-tabs">
-                <button class="schedule-tab active" data-day="1">
-                    <span class="tab-day">Day 1</span>
-                    <span class="tab-date">March 15</span>
-                </button>
-                <button class="schedule-tab" data-day="2">
-                    <span class="tab-day">Day 2</span>
-                    <span class="tab-date">March 16</span>
-                </button>
-                <button class="schedule-tab" data-day="3">
-                    <span class="tab-day">Day 3</span>
-                    <span class="tab-date">March 17</span>
-                </button>
-            </div>
-            <div class="schedule-content">
-                <div class="schedule-day active" data-day="1">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-time">9:00 AM</div>
-                            <div class="timeline-card">
-                                <h4>Opening Ceremony</h4>
-                                <p>Main Auditorium</p>
-                                <span class="timeline-badge main">Main</span>
-                            </div>
+
+            <div class="schedule-container reveal">
+                <div class="schedule-tabs">
+                    <button class="day-btn active" data-day="day1">Day 1</button>
+                    <button class="day-btn" data-day="day2">Day 2</button>
+                    <button class="day-btn" data-day="day3">Day 3</button>
+                </div>
+
+                <div class="timeline" id="day1">
+                    <div class="timeline-item glass-card">
+                        <div class="time">09:00 AM</div>
+                        <div class="timeline-content">
+                            <h4>Inauguration Ceremony</h4>
+                            <span class="badge badge-misc">General</span>
+                            <p>Main Auditorium</p>
                         </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">10:30 AM</div>
-                            <div class="timeline-card">
-                                <h4>Hackathon Kickoff</h4>
-                                <p>Tech Block</p>
-                                <span class="timeline-badge technical">Technical</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">12:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Robo Wars Round 1</h4>
-                                <p>Robotics Lab</p>
-                                <span class="timeline-badge technical">Technical</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">2:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Workshop: AI & ML</h4>
-                                <p>Lab 101</p>
-                                <span class="timeline-badge workshop">Workshop</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">4:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>E-Sports Qualifiers</h4>
-                                <p>Gaming Arena</p>
-                                <span class="timeline-badge gaming">Gaming</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">7:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Cultural Night</h4>
-                                <p>Open Stage</p>
-                                <span class="timeline-badge cultural">Cultural</span>
-                            </div>
+                    </div>
+                    <div class="timeline-item glass-card">
+                        <div class="time">11:00 AM</div>
+                        <div class="timeline-content">
+                            <h4>Hackathon Kickoff</h4>
+                            <span class="badge badge-tech">Technical</span>
+                            <p>Innovation Lab</p>
                         </div>
                     </div>
                 </div>
-                <div class="schedule-day" data-day="2">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-time">9:00 AM</div>
-                            <div class="timeline-card">
-                                <h4>Tech Talks</h4>
-                                <p>Auditorium</p>
-                                <span class="timeline-badge technical">Technical</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">11:00 AM</div>
-                            <div class="timeline-card">
-                                <h4>Robo Wars Finals</h4>
-                                <p>Robotics Lab</p>
-                                <span class="timeline-badge technical">Technical</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">2:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Battle of Bands</h4>
-                                <p>Main Ground</p>
-                                <span class="timeline-badge cultural">Cultural</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">6:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>E-Sports Finals</h4>
-                                <p>Gaming Arena</p>
-                                <span class="timeline-badge gaming">Gaming</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="schedule-day" data-day="3">
-                    <div class="timeline">
-                        <div class="timeline-item">
-                            <div class="timeline-time">10:00 AM</div>
-                            <div class="timeline-card">
-                                <h4>Hackathon Presentations</h4>
-                                <p>Tech Block</p>
-                                <span class="timeline-badge technical">Technical</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">2:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Fashion Show</h4>
-                                <p>Main Stage</p>
-                                <span class="timeline-badge cultural">Cultural</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">5:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Prize Distribution</h4>
-                                <p>Main Auditorium</p>
-                                <span class="timeline-badge main">Main</span>
-                            </div>
-                        </div>
-                        <div class="timeline-item">
-                            <div class="timeline-time">7:00 PM</div>
-                            <div class="timeline-card">
-                                <h4>Closing Ceremony</h4>
-                                <p>Main Auditorium</p>
-                                <span class="timeline-badge main">Main</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="download-schedule">
-                <button class="btn-outline">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                    Download Full Schedule
-                </button>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="gallery-particles">
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-            <div class="gallery-particle"></div>
-        </div>
+    <section id="gallery" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">Memories</span>
+            <div class="section-header reveal">
                 <h2 class="section-title">ZION <span class="gradient-text">Gallery</span></h2>
-                <p class="section-subtitle">Relive the magic of past editions. A glimpse into the unforgettable moments.
-                </p>
             </div>
-            <div class="gallery-video">
-                <div class="video-container">
-                    <div class="video-placeholder">
-
-                        <!-- <div class="play-button">
-                            <svg width="64" height="64" viewBox="0 0 24 24" fill="currentColor">
-                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                            </svg>
-                        </div> -->
-
-                        <video autoplay muted loop playsinline id="gallery-video">
-                            <source src="./legacy.mp4" type="video/mp4">
-                        </video>
-
-                        <div class="video-info">
-                            <h4>ZION 2025 Highlights</h4>
-                            <p></p>
-                        </div>
-                        <div class="video-duration">2:34</div>
-                    </div>
+            <div class="gallery-grid reveal">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=800&q=80" alt="Gallery 1">
                 </div>
-            </div>
-            <div class="gallery-header">
-                <span class="gallery-label">Cherished</span>
-                <h3 class="gallery-title">Moments</h3>
-                <p class="gallery-subtitle">Limited collection of our best memories</p>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item shape-rounded">
-                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600&h=400&fit=crop"
-                        alt="Opening Ceremony">
-                    <div class="gallery-overlay">
-                        <span class="gallery-number">01</span>
-                        <h4>Opening Ceremony</h4>
-                        <p>The grand beginning of ZION 2025</p>
-                    </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="Gallery 2">
                 </div>
-                <div class="gallery-item shape-blob">
-                    <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=400&fit=crop"
-                        alt="Night Concert">
-                    <div class="gallery-overlay">
-                        <span class="gallery-number">02</span>
-                        <h4>Night Concert</h4>
-                        <p>Unforgettable musical performances</p>
-                    </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?w=800&q=80" alt="Gallery 3">
                 </div>
-                <div class="gallery-item shape-arch">
-                    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=600&h=400&fit=crop"
-                        alt="Hackathon Arena">
-                    <div class="gallery-overlay">
-                        <span class="gallery-number">03</span>
-                        <h4>Hackathon Arena</h4>
-                        <p>Coding challenges and innovation</p>
-                    </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?w=800&q=80" alt="Gallery 4">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team" class="team">
+    <section id="team" class="section">
         <div class="container">
-            <div class="section-header">
-                <span class="section-label">The Dream Team</span>
-                <h2 class="section-title">Meet Our <span class="gradient-text">Team</span></h2>
-                <p class="section-subtitle">The passionate individuals behind ZION 2026 who work tirelessly to make this
-                    event unforgettable.</p>
+            <div class="section-header reveal">
+                <h2 class="section-title">Our <span class="gradient-text">Team</span></h2>
             </div>
-            <div class="team-filters">
-                <button class="team-filter active" data-filter="all">All</button>
-                <button class="team-filter" data-filter="technical">Technical</button>
-                <button class="team-filter" data-filter="management">Management</button>
-                <button class="team-filter" data-filter="creative">Creative</button>
-                <button class="team-filter" data-filter="cultural">Cultural</button>
-                <button class="team-filter" data-filter="sports">Sports</button>
-            </div>
-            <div class="team-grid">
-                <div class="team-card" data-category="technical">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face"
-                                alt="Arjun Sharma">
-                        </div>
-                        <div class="team-badge technical">Technical</div>
-                        <h4 class="team-name">Arjun Sharma</h4>
-                        <p class="team-role">Technical Head</p>
-                        <p class="team-dept">Computer Engineering</p>
-                        <p class="team-year">Final Year</p>
-                        <button class="view-profile-btn">View Profile</button>
+            <div class="team-grid reveal">
+                <div class="team-card glass-card">
+                    <div class="team-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Team 1"
+                            class="team-img">
+                        <span class="role-badge">Technical Head</span>
+                    </div>
+                    <div class="team-info">
+                        <h3>Arjun Sharma</h3>
+                        <p class="dept"><i data-lucide="cpu" class="icon-sm"></i> Computer Engineering</p>
+                        <span class="year-badge">Final Year</span>
                     </div>
                 </div>
-                <div class="team-card" data-category="management">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face"
-                                alt="Priya Patel">
-                        </div>
-                        <div class="team-badge management">Management</div>
-                        <h4 class="team-name">Priya Patel</h4>
-                        <p class="team-role">Event Coordinator</p>
-                        <p class="team-dept">Information Technology</p>
-                        <p class="team-year">Final Year</p>
-                        <button class="view-profile-btn">View Profile</button>
+                <div class="team-card glass-card">
+                    <div class="team-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Team 2"
+                            class="team-img">
+                        <span class="role-badge">Cultural Head</span>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sneha Gupta</h3>
+                        <p class="dept"><i data-lucide="music" class="icon-sm"></i> Info. Technology</p>
+                        <span class="year-badge">Final Year</span>
                     </div>
                 </div>
-                <div class="team-card" data-category="technical">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face"
-                                alt="Rahul Verma">
-                        </div>
-                        <div class="team-badge technical">Technical</div>
-                        <h4 class="team-name">Rahul Verma</h4>
-                        <p class="team-role">Robotics Lead</p>
-                        <p class="team-dept">Electronics Engineering</p>
-                        <p class="team-year">Third Year</p>
-                        <button class="view-profile-btn">View Profile</button>
+                <div class="team-card glass-card">
+                    <div class="team-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80" alt="Team 3"
+                            class="team-img">
+                        <span class="role-badge">Design Lead</span>
                     </div>
-                </div>
-                <div class="team-card" data-category="creative">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&crop=face"
-                                alt="Sneha Gupta">
-                        </div>
-                        <div class="team-badge creative">Creative</div>
-                        <h4 class="team-name">Sneha Gupta</h4>
-                        <p class="team-role">Design Lead</p>
-                        <p class="team-dept">Computer Engineering</p>
-                        <p class="team-year">Final Year</p>
-                        <button class="view-profile-btn">View Profile</button>
+                    <div class="team-info">
+                        <h3>Karan Malhotra</h3>
+                        <p class="dept"><i data-lucide="pen-tool" class="icon-sm"></i> Architecture</p>
+                        <span class="year-badge">Third Year</span>
                     </div>
-                </div>
-                <div class="team-card" data-category="sports">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop&crop=face"
-                                alt="Vikram Rao">
-                        </div>
-                        <div class="team-badge sports">Sports</div>
-                        <h4 class="team-name">Vikram Rao</h4>
-                        <p class="team-role">Sports Coordinator</p>
-                        <p class="team-dept">Mechanical Engineering</p>
-                        <p class="team-year">Third Year</p>
-                        <button class="view-profile-btn">View Profile</button>
-                    </div>
-                </div>
-                <div class="team-card" data-category="cultural">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=200&h=200&fit=crop&crop=face"
-                                alt="Ananya Desai">
-                        </div>
-                        <div class="team-badge cultural">Cultural</div>
-                        <h4 class="team-name">Ananya Desai</h4>
-                        <p class="team-role">Cultural Head</p>
-                        <p class="team-dept">Civil Engineering</p>
-                        <p class="team-year">Second Year</p>
-                        <button class="view-profile-btn">View Profile</button>
-                    </div>
-                </div>
-                <div class="team-card" data-category="technical">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&h=200&fit=crop&crop=face"
-                                alt="Karan Malhotra">
-                        </div>
-                        <div class="team-badge technical">Technical</div>
-                        <h4 class="team-name">Karan Malhotra</h4>
-                        <p class="team-role">Web Development Lead</p>
-                        <p class="team-dept">Computer Engineering</p>
-                        <p class="team-year">Final Year</p>
-                        <button class="view-profile-btn">View Profile</button>
-                    </div>
-                </div>
-                <div class="team-card" data-category="management">
-                    <div class="team-card-inner">
-                        <div class="team-avatar">
-                            <img src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=200&h=200&fit=crop&crop=face"
-                                alt="Meera Iyer">
-                        </div>
-                        <div class="team-badge management">Management</div>
-                        <h4 class="team-name">Meera Iyer</h4>
-                        <p class="team-role">Marketing Head</p>
-                        <p class="team-dept">Electronics & Telecommunication</p>
-                        <p class="team-year">Third Year</p>
-                        <button class="view-profile-btn">View Profile</button>
-                    </div>
-                </div>
-            </div>
-            <div class="team-stats">
-                <div class="team-stat">
-                    <div class="team-stat-value">50+</div>
-                    <div class="team-stat-label">Team Members</div>
-                </div>
-                <div class="team-stat">
-                    <div class="team-stat-value">5</div>
-                    <div class="team-stat-label">Departments</div>
-                </div>
-                <div class="team-stat">
-                    <div class="team-stat-value">6</div>
-                    <div class="team-stat-label">Months Planning</div>
-                </div>
-                <div class="team-stat">
-                    <div class="team-stat-value">100%</div>
-                    <div class="team-stat-label">Dedication</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sponsors Section -->
-    <section id="sponsors" class="sponsors">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Our Partners</span>
-                <h2 class="section-title">Our <span class="gradient-text">Sponsors</span></h2>
-                <p class="section-subtitle">Proudly supported by industry leaders who believe in fostering innovation
-                    and creativity.</p>
-            </div>
-            <div class="sponsors-grid">
-                <div class="sponsor-card platinum">
-                    <div class="sponsor-tier">Platinum</div>
-                    <h4 class="sponsor-name">TechCorp Industries</h4>
-                    <p class="sponsor-desc">Leading technology solutions provider empowering innovation</p>
-                </div>
-                <div class="sponsor-card platinum">
-                    <div class="sponsor-tier">Platinum</div>
-                    <h4 class="sponsor-name">InnovateLabs</h4>
-                    <p class="sponsor-desc">Pioneering research and development in AI and robotics</p>
-                </div>
-                <div class="sponsor-card gold">
-                    <div class="sponsor-tier">Gold</div>
-                    <h4 class="sponsor-name">CloudNine Systems</h4>
-                    <p class="sponsor-desc">Cloud infrastructure and digital transformation experts</p>
-                </div>
-                <div class="sponsor-card gold">
-                    <div class="sponsor-tier">Gold</div>
-                    <h4 class="sponsor-name">DataFlow Analytics</h4>
-                    <p class="sponsor-desc">Big data analytics and business intelligence solutions</p>
-                </div>
-                <div class="sponsor-card silver">
-                    <div class="sponsor-tier">Silver</div>
-                    <h4 class="sponsor-name">CyberShield Security</h4>
-                    <p class="sponsor-desc">Enterprise cybersecurity and threat protection</p>
-                </div>
-                <div class="sponsor-card silver">
-                    <div class="sponsor-tier">Silver</div>
-                    <h4 class="sponsor-name">CodeCraft Studios</h4>
-                    <p class="sponsor-desc">Software development and digital experience design</p>
-                </div>
-                <div class="sponsor-card bronze">
-                    <div class="sponsor-tier">Bronze</div>
-                    <h4 class="sponsor-name">FutureTech Solutions</h4>
-                    <p class="sponsor-desc">Emerging technology consulting and implementation</p>
-                </div>
-                <div class="sponsor-card bronze">
-                    <div class="sponsor-tier">Bronze</div>
-                    <h4 class="sponsor-name">DevOps Masters</h4>
-                    <p class="sponsor-desc">CI/CD pipeline automation and infrastructure management</p>
-                </div>
-            </div>
-            <div class="sponsors-marquee">
-                <div class="marquee-track">
-                    <span class="marquee-item">TechCorp Industries</span>
-                    <span class="marquee-item">InnovateLabs</span>
-                    <span class="marquee-item">CloudNine Systems</span>
-                    <span class="marquee-item">DataFlow Analytics</span>
-                    <span class="marquee-item">CyberShield Security</span>
-                    <span class="marquee-item">CodeCraft Studios</span>
-                    <span class="marquee-item">FutureTech Solutions</span>
-                    <span class="marquee-item">DevOps Masters</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="section-header">
-                        <span class="section-label">Contact</span>
-                        <h2 class="section-title">Get in touch <span class="gradient-text">with us</span></h2>
-                    </div>
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <span class="z-icon">Z</span>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Institute</h4>
-                                <p>Dr. D. Y. Patil Institute of Technology, Pimpri, Pune</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path
-                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
-                                    </path>
-                                    <polyline points="22,6 12,13 2,6"></polyline>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Email</h4>
-                                <a href="mailto:zion.dit@dypvp.edu.in">zion.dit@dypvp.edu.in</a>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                    <circle cx="12" cy="10" r="3"></circle>
-                                </svg>
-                            </div>
-                            <div class="contact-details">
-                                <h4>Location</h4>
-                                <a href="https://www.google.com/maps?ll=18.623083,73.81602&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11226582201806666806"
-                                    target="_blank" class="location-link">
-                                    View on Google Maps
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2">
-                                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                                        <polyline points="15 3 21 3 21 9"></polyline>
-                                        <line x1="10" y1="14" x2="21" y2="3"></line>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-cta">
-                    <h3>Ready to <span class="gradient-text">Join?</span></h3>
-                    <p>Don't miss out on the biggest college festival of the year. Register now and be part of the ZION
-                        experience.</p>
-                    <button class="btn-primary btn-magnetic animate-pulse-glow">Register Now</button>
                 </div>
             </div>
         </div>
@@ -1108,89 +317,30 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">ZION</h3>
-                    <p class="footer-desc">Annual Technical and Cultural Festival at Dr. D. Y. Patil Institute of
-                        Technology, Pimpri, Pune. Where innovation meets celebration.</p>
-                    <div class="footer-contact">
-                        <a href="mailto:zion.dit@dypvp.edu.in">zion.dit@dypvp.edu.in</a>
-                        <a href="https://www.google.com/maps?ll=18.623083,73.81602&z=15&t=m&hl=en&gl=IN&mapclient=embed&cid=11226582201806666806"
-                            target="_blank">Dr. D. Y. Patil Institute of Technology, Pimpri, Pune</a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#events">Events</a></li>
-                        <li><a href="#schedule">Schedule</a></li>
-                        <li><a href="#gallery">Gallery</a></li>
-                        <li><a href="#team">Team</a></li>
-                        <li><a href="#sponsors">Sponsors</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Instagram">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="Twitter">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-                                </path>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="YouTube">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
-                                </path>
-                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
-                            </svg>
-                        </a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
-                                </path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="#link" class="social-link" aria-label="GitHub" target="_blank">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <img src="./zion_2026_logo.png" alt="ZION2026" class="footer-logo.img">
+                <p>Rewrite the Future</p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 ZION. All rights reserved.</p>
-                <p class="made-with">Made with <span class="heart">❤</span> by ZION Team</p>
-                <p class="theme-tag">Theme: <span class="gradient-text">Palimpsest</span> — Rewrite the Future</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/zion.dit/" target="_blank" rel="noopener noreferrer"><i
+                        data-lucide="instagram"></i></a>
+                <a href="#"><i data-lucide="twitter"></i></a>
+                <a href="https://www.linkedin.com/company/zion-dit/" target="_blank" rel="noopener noreferrer"><i
+                        data-lucide="linkedin"></i></a>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ZION Tech & Culture Festival. All rights reserved.</p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+
 </body>
+
 
 </html>
