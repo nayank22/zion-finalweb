@@ -2003,3 +2003,64 @@ nav {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* Ensure 3D context is established properly */
+.event-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.flip-card {
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    /* Firefox fix: ensure proper 3d context */
+    -moz-transform-style: preserve-3d;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    /* Firefox fix: force hardware acceleration */
+    will-change: transform;
+}
+
+/* Critical Firefox fix: ensure both sides are properly hidden */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    /* Explicit Firefox prefix */
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    /* Force GPU layer */
+    transform: translateZ(0);
+}
+
+/* Ensure front is at z-index 2, back at z-index 1 */
+.flip-card-front {
+    z-index: 2;
+    /* Firefox fix: prevent backface from bleeding through */
+    transform: rotateY(0deg) translateZ(1px);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg) translateZ(1px);
+    z-index: 1;
+}
+
+/* Firefox-specific: when hovering, ensure proper stacking */
+.event-card:hover .flip-card-front {
+    z-index: 1;
+}
+
+.event-card:hover .flip-card-back {
+    z-index: 2;
+}
